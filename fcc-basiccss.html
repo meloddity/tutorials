@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<!--Left off at "Adjust the Padding of an Element"-->
+
+<head>
+	<title>Meloddity | Web Design & Development Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<style>	
+		.mini-nav{
+			background: silver;
+			width: 98%;
+			font-size: 15px;
+			padding: 5px; 
+			text-align: right;
+		}
+		.red-text{
+			color: red;
+		}
+		p{
+			font-size: 16px;
+			font-family: monospace;
+		}
+		h2{
+			font-family: Lobster, monospace;
+		}
+		.smaller-image{
+			width: 100px;
+		}
+		.thick-green-border{
+			border-color: green;
+			border-width: 10px;
+			border-style: solid;
+			border-radius: 50%;
+		}
+		.silver-background{
+			background-color: silver;
+		}
+		#cat-photo-form{
+			background-color: green;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<div class="mini-nav">
+<a href="../webdesign.html">Back to Web Design & Development</a>
+<!--<p>freecodecamp.org tutorial notes</p>-->
+</div>
+
+<!--<h1>Hello World</h1>-->
+
+<h2 class="red-text">CatPhotoApp</h2>
+<a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="Kitty" class="smaller-image thick-green-border"></a>
+<main>
+<p>View more <a href="http://freecatphotoapp.com">cat photos</a>. <a href="#footer">Jump to bottom</a> This is a <a href="#">dead link</a></p>
+
+  <p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+ 
+
+<div class="silver-background">
+<h4>Three things cats love:</h4>
+<ul>
+	<li>catnip</li>
+	<li>wheatgrass</li>
+	<li>attention</li>
+</ul> 
+
+<h4>Three things cats hate:</h4>
+<ol>
+	<li>baths</li>
+	<li>dogs</li>
+	<li>attention</li>
+</ol>
+</div>
+
+<form action="#" id="cat-photo-form">
+	<input type="text" placeholder="placeholder text" required>
+	<button type="submit">Submit</button>
+
+	<!--radio buttons with the same name are exculsionary to each other-->
+	<label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" checked>Indoor</label>
+	<label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor">Outdoor</label>
+
+	<!--Checkboxes-->
+	<label for="snuggly"><input id="snuggly" type="checkbox" name="personality" checked>Snuggly</label>
+	<label for="independent"><input id="independent" type="checkbox" name="personality">Independent</label>
+	<label for="playful"><input id="playful" type="checkbox" name="personality">Playful</label>
+</form>
+
+<p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture, especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.</p>
+
+
+  <p>Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
+
+</main>
+<footer id="footer" style="background: black; color: white; text-align:center;">Here's the bottom</footer>
+</body>
+</html>
