@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+  h4 {
+	text-align:center;
+	//height: 25px; 
+	background-color: rgba(45, 45, 45, 0.1);
+	padding: 10px;
+	font-size: 27px;
+	//box-shadow: (offset-x) (offset-y) (blur-radius) (spread-radius) (color value)
+	//text-transform:uppercase;
+  }
+  p {
+   	text-align: justify;
+	//font-size: 16px;
+	line-height: 25px; 
+  }
+  .links {
+    margin-right: 20px;
+	opacity: 0.7;    
+  }
+  .fullCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+	width: 245px;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+	#thumbnail{
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+	a:hover{
+		color:red;
+	}
+	h2 {
+		position: relative;
+		//top:15px;
+		left: 50px;
+	}
+	h3 {
+		position: absolute;/*Scrolls with the window*/
+		top: 5px;
+		right: 20px;
+	}
+	
+	h5{
+		background-color: red;
+		padding: 25px;
+		position: fixed;
+		right: -5px;
+		bottom: 100px;
+	}
+	#left{
+		background-color: yellow;
+		float:left;
+		height: 25px;
+		width: 200px;
+	}
+	#right{
+		background-color: green;
+		float:right;
+		height: 25px;
+		width: 200px;
+	}
+	#box-1{
+		height:100px;
+		width:100px;
+		background-color: pink;
+		z-index: 2;
+	}
+	#box-2{
+		height: 150px;
+		width: 150px;
+		background-color:blue;
+		position: relative;
+		bottom: 75px;
+		z-index: 3;
+	}
+	#box-3{
+		height: 200px;
+		width: 300px;
+		margin:auto;
+		background-color: purple;
+		color: white;
+	}
+	.comp-box{
+		height: 100px;
+		width: 100px;
+		text-align: center;
+		background-color: black;
+		//display: inline;
+		float: left;
+	}
+	header{
+		//background-color: #09a7a1;
+		background-color: hsl(180, 80%, 25%);
+    		color: white;
+    		padding: 0.25em;
+	}
+	footer {
+    		background-color: #09a7a1;
+    		color: white;
+    		padding: 0.5em;
+  	}
+	button{
+		border-radius: 5px;
+    
+		color: white;
+    
+		background-color: #0F5897;
+    
+		padding: 5px 10px 8px 10px;
+	}
+	.green{
+		background-color: hsl(120,100%,50%);
+	}
+	.cyan{
+		background-color: hsl(180,100%,50%);
+	}
+	.blue{
+		background-color: hsl(240,100%,50%);
+	}
+	.grad-box-1{
+		background: linear-gradient(90deg, red, yellow, blue);
+		height: 250px;
+		width: 250px;
+	}
+	.grad-box-2{
+		background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+		height: 250px;
+		width: 250px;
+	}
+	.img-box{
+		height: 250px;
+		background: url(https://i.imgur.com/MJAkxbh.png);
+	}
+ 	.ball { 
+    		width: 40px;
+    		height: 40px;
+    		margin: 50 auto;
+    		//position: fixed;
+    		background: linear-gradient(35deg, #ccffff, #ffcccc);
+    		border-radius: 50%;
+		float: left;
+  	}
+
+	#ball1 {
+    		//left: 20%;
+  	}
+  	#ball2 {
+    		//left: 65%;
+		transform: scale(1.5);
+  	}
+
+	.move-box { 
+    		width: 70%;
+    		height: 100px;
+    		margin:  50px auto;
+    		background: linear-gradient(53deg, #ccfffc, #ffcccf);
+		transform: skewX(24deg);
+	}
+
+  	.move-box:hover{
+    		transform: scale(1.1) skewY(-10deg);
+  	}
+
+	.moon{
+  		//position: absolute;
+  		margin: auto;
+  		top: 0;
+  		right: 0;
+  		bottom: 0;
+  		left: 0;
+  		width: 100px;
+  		height: 100px;
+  
+  		background-color: transparent;
+  		border-radius: 50%;
+  		box-shadow: 25px 10px 0px 0px blue; 
+	}
+
+	.heart {
+  		position: absolute;
+  		margin: auto;
+  		top: 0;
+  		right: 0;
+  		bottom: 0;
+  		left: 0;
+  		background-color: pink;
+  		height: 50px;
+  		width: 50px;
+  		transform: rotate(-45deg) ;
+	}
+	.heart::after {
+  		background-color: pink;
+  		content: "";
+  		border-radius: 50%;
+  		position: absolute;
+  		width: 50px;
+  		height: 50px;
+  		top: 0px;
+  		left: 25px;
+	}
+	.heart::before {
+  		content: "";
+  		background-color: pink;
+  		border-radius: 50%;
+  		position: absolute;
+  		width: 50px;
+  		height: 50px;
+  		top: -25px;
+  		left: 0px;
+	}
+ 	.anim {
+    
+		height: 40px;
+    
+		width: 70%;
+    
+		background: black;
+    
+		margin: 50px auto;
+    
+		border-radius: 5px;
+
+		position: relative;  
+	}
+
+  
+	#rect {
+    
+		animation-name: rainbow;
+    
+		animation-duration: 4s;
+		animation-iteration-count: 2;    
+ 
+	}
+  
+  
+	@keyframes rainbow{
+    
+		0%{
+			background-color:blue;
+			top: 0px;
+		}
+ 
+   
+		50%{
+			background-color:green;
+			top: 50px;
+		}
+ 
+   
+		100%{
+			background-color:yellow;
+			top: 0px;
+			opacity: 0.1;
+		}
+  
+	}
+	button:hover {
+    
+		animation-name: background-color;
+    
+		animation-duration: 500ms;
+		animation-fill-mode: forwards;
+  
+	}
+  
+	@keyframes background-color{
+    
+		100%{background-color: #4791d0;}
+  
+	}
+ </style>
+</head>
+
+<body>
+<div class="fullCard" id="thumbnail">
+  <div class="cardContent">
+    <div class="cardText">
+      <h4 style="text-transform:uppercase;">Google</h4>
+	<hr>
+      <p><em><s>Google</s> Alphabet was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+    </div>
+    <div class="cardLinks">
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+    </div>
+  </div>
+</div>
+
+<h2>This is positioning</h2>
+<h3>Relative</h3>
+<h5>FIXED</h5>
+<hr>
+<div id="left">LEFT</div>
+<div id="right">RIGHT</div>
+<br><br><Br>
+<hr>
+<div id="box-1" style="z-index:5;"></div>
+<div id="box-2"></div>
+<hr>
+<div id="box-3" style="text-align:center;">Centered</div>
+<hr>
+
+<strong>Additive Complementary Colors</strong>
+<br><br>
+<div class="comp-box" style="background-color: #ff0000;">red</div> <div class="comp-box" style="background-color: white;">&</div> <div class="comp-box" style="background-color: #00ffff;">cyan</div>
+<br><br><br><Br><br><br><bR>
+<div class="comp-box" style="background-color: #00ff00;">green</div> <div class="comp-box" style="background-color: white;">&</div> <div class="comp-box" style="background-color: #ff00ff;">magenta</div>
+<br><br><br><Br><br><br><bR>
+<div class="comp-box" style="background-color: #0000ff;">blue</div> <div class="comp-box" style="background-color: white;">&</div> <div class="comp-box" style="background-color: #ffff00;">yellow</div>
+<br><br><br><Br><br><br><bR>
+<hr>
+
+<strong>Tertiary Colors</strong>
+<br><br>
+<div class="comp-box" style="background-color: #ff7d00;">orange</div><div class="comp-box" style="background-color: #00ffff;">cyan</div><div class="comp-box" style="background-color: #ff007d;">raspberry</div>
+
+<!--Adjust the Color of Various Elements to Complementary Colors-->
+<br><br><br><Br><br><br><bR>
+<hr>
+<strong>Adjust the Color of Various Elements to Complementary Colors</strong>
+<br><br>
+Usually, one color is the main or dominant color and its complement is used to highlight certain content on the page.
+<br><br>
+<header>
+  Cooking with FCC!
+</header>
+<p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+<button>Sign Up</button>
+<footer>&copy; 2018 FCC Kitchen</footer>
+
+<br>
+<hr>
+<strong>Adjust the Hue of a Color</strong>
+<p>Hue, Saturation, & Lightness</p>
+
+<div class="comp-box green">Green</div>
+<div class="comp-box cyan">Cyan</div>
+<div class="comp-box blue">Blue</div>
+<br><br><br><Br><br><br><bR>
+
+<hr>
+<strong>Adjust the Tone of a Color</strong>
+<p>+White = tint</p>
+<p>+Gray = tone</p>
+<p>+black = shade</p>
+
+<hr>
+<strong>Create a Gradual CSS Linear Gradient</strong>
+<div class="grad-box-1"></div>
+<div class="grad-box-2"></div>
+
+<hr>
+<strong>Create Texture by Adding a Subtle Pattern as a Background Image</strong>
+<div class="img-box"></div>
+
+<hr>
+<strong>Use the CSS Transform scale Property to Change the Size of an Element</strong>
+<br><br>
+<div class="ball" id= "ball1"></div>
+<div class="ball" id= "ball2"></div>
+<br><br><br>
+
+<hr>
+<strong>Use the CSS Transform scale Property to Scale an Element on Hover</strong>
+<br><strong>Use the CSS Transform Property skewX to Skew an Element Along the X-Axis</strong>
+<br><strong>Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis</strong>
+<br><br>
+<div class="move-box"></div>
+
+<br>
+<hr>
+<strong>Create a Graphic Using CSS</strong>
+<br>
+<div class="moon"></div>
+
+<br>
+<hr>
+<strong>Create a More Complex Shape Using CSS and HTML</strong>
+<br>
+<div class = "heart"></div>
+<p>Please see the heart at the top of the page.</p>
+<br>
+
+<hr>
+<strong>Learn How the CSS @keyframes and animation Properties Work</strong>
+<br>
+<div class="anim" id="rect"></div>
+<br>
+
+<hr>
+<strong>Use CSS Animation to Change the Hover State of a Button</strong>
+<br>
+<button>Register</button>
+<br>
+
+<hr>
+<strong>Create Movement Using CSS Animation</strong>
+<br>
+
+</body>
+</html>
